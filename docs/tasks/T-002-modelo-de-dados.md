@@ -21,7 +21,8 @@ O protótipo guarda cada ferramenta como um documento com campos livres. O produ
 
 ## Critérios de aceite
 
-- [ ] Migrações criam as tabelas.
+- [ ] Migrações em `supabase/migrations/` criam as tabelas no Supabase.
+- [ ] RLS habilitado em todas as tabelas.
 - [ ] Nenhum campo armazena número de cartão ou dado bancário.
 - [ ] Ciclos com período maior que um ano (ex.: certificado SSL de 3 anos) têm forma clara de registro.
 

@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Status | A fazer |
+| Status | Em andamento |
 | Fase | 1 |
 | Prioridade | Alta |
 | Responsável | |
@@ -26,4 +26,9 @@ O protótipo roda como página publicada no Claude, com banco próprio da plataf
 
 ## Notas
 
-O time já usa Vercel e PlanetScale no app; vale considerar por familiaridade, mas sem obrigação.
+Decidido em 09/11/2026 ([ADR-001](../decisoes/ADR-001-stack.md)):
+
+- [x] Banco: Supabase (Postgres, Auth, Storage).
+- [x] Hospedagem: Vercel, projeto `wefinance`.
+- [ ] Framework do frontend e backend.
+- [ ] Conectar o repositório ao projeto Vercel e configurar as variáveis do Supabase.

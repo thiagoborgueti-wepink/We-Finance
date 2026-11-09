@@ -22,6 +22,16 @@ O objetivo é que o time financeiro tenha uma visão única dos pagamentos de fe
 
 Detalhes em [docs/ROADMAP.md](docs/ROADMAP.md).
 
+## Stack
+
+| Camada | Escolha | Status |
+|---|---|---|
+| Banco, autenticação e arquivos | Supabase | Decidido |
+| Hospedagem | Vercel | Decidido |
+| Framework | A definir | Pendente |
+
+Decisão registrada em [docs/decisoes/ADR-001-stack.md](docs/decisoes/ADR-001-stack.md). Para rodar localmente, copie `.env.example` para `.env` e preencha com as chaves do Supabase.
+
 ## Como trabalhamos
 
 As tarefas ficam em Markdown dentro do próprio repositório, não no GitHub Projects:
