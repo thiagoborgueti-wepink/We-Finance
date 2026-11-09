@@ -34,6 +34,8 @@ Decisão registrada em [docs/decisoes/ADR-001-stack.md](docs/decisoes/ADR-001-st
 
 ## Como trabalhamos
 
+O projeto é **AI-first**: o Claude constrói a aplicação de ponta a ponta (arquitetura, código, banco, testes e documentação), e o PO define prioridades, aprova decisões e revisa cada entrega no preview do Vercel. As regras que o Claude segue estão em [CLAUDE.md](CLAUDE.md).
+
 As tarefas ficam em Markdown dentro do próprio repositório, não no GitHub Projects:
 
 - [docs/BOARD.md](docs/BOARD.md): o quadro, com as colunas Backlog, A fazer, Em andamento e Feito.

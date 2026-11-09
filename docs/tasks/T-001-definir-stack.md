@@ -10,7 +10,7 @@
 
 ## Contexto
 
-O protótipo roda como página publicada no Claude, com banco próprio da plataforma. Para virar produto e, depois, projeto open source, precisamos de uma stack que o time de dev mantenha e que rode em Docker.
+O protótipo roda como página publicada no Claude, com banco próprio da plataforma. Para virar produto e, depois, projeto open source, precisamos de uma stack que o Claude construa e mantenha (modelo AI-first, ver [CLAUDE.md](../../CLAUDE.md)) e que rode em Docker.
 
 ## O que fazer
 
@@ -20,7 +20,7 @@ O protótipo roda como página publicada no Claude, com banco próprio da plataf
 
 ## Critérios de aceite
 
-- [ ] ADR aprovado pelo time de dev.
+- [ ] ADR proposto pelo Claude e aprovado pelo PO.
 - [ ] Repositório com estrutura inicial e instruções para rodar localmente.
 - [ ] A stack roda em Docker (requisito da Fase 4).
 

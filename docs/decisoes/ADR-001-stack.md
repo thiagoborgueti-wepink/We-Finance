@@ -8,7 +8,7 @@
 
 ## Contexto
 
-O protótipo rodava como página publicada no Claude, com banco da própria plataforma. O produto precisa de um banco que o time de dev mantenha, com autenticação e armazenamento de arquivos, e que possa ser reproduzido por quem usar o projeto open source.
+O protótipo rodava como página publicada no Claude, com banco da própria plataforma. O produto, construído pelo Claude no modelo AI-first (ver [CLAUDE.md](../../CLAUDE.md)), precisa de um banco gerenciado, com autenticação e armazenamento de arquivos, e que possa ser reproduzido por quem usar o projeto open source.
 
 ## Decisão
 
@@ -32,7 +32,7 @@ A aplicação roda num projeto Vercel da WePink (`wefinance`), com deploy a part
 
 ### Framework (pendente)
 
-A definir pelo time de dev. Como a hospedagem é Vercel e o banco é Supabase, Next.js é a opção mais direta (suporte nativo no Vercel e integração oficial do Supabase), mas a escolha fica com o time.
+A definir. O Claude propõe e o PO aprova. Como a hospedagem é Vercel e o banco é Supabase, Next.js é a opção mais direta (suporte nativo no Vercel e integração oficial do Supabase).
 
 ## Consequências
 
