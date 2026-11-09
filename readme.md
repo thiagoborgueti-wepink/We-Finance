@@ -28,7 +28,7 @@ Detalhes em [docs/ROADMAP.md](docs/ROADMAP.md).
 |---|---|---|
 | Banco, autenticação e arquivos | Supabase | Decidido |
 | Hospedagem | Vercel | Decidido |
-| Framework | A definir | Pendente |
+| Framework | Next.js + TypeScript | Proposto ([ADR-002](docs/decisoes/ADR-002-framework.md)) |
 
 Decisão registrada em [docs/decisoes/ADR-001-stack.md](docs/decisoes/ADR-001-stack.md). Para rodar localmente, copie `.env.example` para `.env` e preencha com as chaves do Supabase.
 

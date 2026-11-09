@@ -16,13 +16,15 @@ Na prática, isso significa:
 - Toda decisão técnica relevante vira um ADR em `docs/decisoes/`.
 - O código precisa ser legível e documentado o suficiente para o Claude retomar o trabalho em uma sessão nova, sem depender de memória da conversa.
 
+**AI-first é a forma de construir, não uma funcionalidade.** O produto **não tem recursos de IA**: nenhuma chamada a LLM ou provedor de IA no código. Leitura de faturas, importação e conciliação usam regras e parsers determinísticos.
+
 ## Stack
 
 | Camada | Escolha | Status |
 |---|---|---|
 | Banco, autenticação e arquivos | Supabase (Postgres, Auth, Storage) | Decidido |
 | Hospedagem | Vercel, projeto `wefinance` (time `thiagoborgueti-wepinks-projects`) | Decidido |
-| Framework | A definir na T-001 | Pendente |
+| Framework | Next.js + TypeScript (proposta no [ADR-002](docs/decisoes/ADR-002-framework.md)) | Aguardando aprovação do PO |
 
 - Repositório: https://github.com/thiagoborgueti-wepink/We-Finance, conectado ao Vercel (deploy da `main`, preview por pull request).
 - Variáveis do Supabase são criadas no Vercel pela integração do Marketplace. Localmente: `vercel env pull .env.local`. Nomes em [.env.example](.env.example).

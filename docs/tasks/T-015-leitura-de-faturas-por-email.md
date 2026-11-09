@@ -16,7 +16,7 @@ As faturas das ferramentas do APP chegam em appwepink@wepink.com.br. A busca na 
 
 - Conectar à caixa appwepink@wepink.com.br com acesso só de leitura.
 - Identificar e-mails de cobrança por remetente e assunto (Apple, Vercel, GitHub, PlanetScale, Anthropic, Sectigo, Frenet, OneSignal, Redis).
-- Extrair ferramenta, valor, moeda, data e link do e-mail.
+- Extrair ferramenta, valor, moeda, data e link do e-mail com regras por remetente (padrões de texto), sem IA.
 - Fila de revisão: cada leitura vira uma sugestão; só entra no cadastro após aprovação.
 
 ## Critérios de aceite

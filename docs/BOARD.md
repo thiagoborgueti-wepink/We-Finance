@@ -30,7 +30,7 @@ Prioridade: 🔴 Alta · 🟡 Média · ⚪ Baixa
 
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
-| [T-001 Definir stack e estrutura do repositório](tasks/T-001-definir-stack.md): Supabase e Vercel definidos, falta o framework | 1 | 🔴 | |
+| [T-001 Definir stack e estrutura do repositório](tasks/T-001-definir-stack.md): Supabase e Vercel definidos; Next.js proposto no ADR-002, aguardando PO | 1 | 🔴 | |
 
 ## Backlog
 

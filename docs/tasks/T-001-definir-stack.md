@@ -30,7 +30,7 @@ Decidido em 09/11/2026 ([ADR-001](../decisoes/ADR-001-stack.md)):
 
 - [x] Banco: Supabase (Postgres, Auth, Storage).
 - [x] Hospedagem: Vercel, projeto `wefinance`.
-- [ ] Framework do frontend e backend.
+- [ ] Framework: Next.js + TypeScript proposto no [ADR-002](../decisoes/ADR-002-framework.md), aguardando aprovação do PO.
 - [x] Pasta local ligada ao projeto Vercel (`vercel link`).
 - [x] Variáveis do Supabase no Vercel via integração do Marketplace (Production e Preview).
 - [ ] Habilitar o ambiente Development na integração, para `vercel env pull` funcionar localmente.
