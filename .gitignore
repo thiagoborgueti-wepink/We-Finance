@@ -6,8 +6,29 @@
 .env.*
 !.env.example
 
+# Dependências
+/node_modules
+
+# Next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# Testes
+/coverage
+/playwright-report/
+/test-results/
+
 # Supabase local
 supabase/.branches
 supabase/.temp
 
+# Vercel
 .vercel
+
+# Diversos
+.DS_Store
+*.pem
+npm-debug.log*
