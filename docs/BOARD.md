@@ -30,7 +30,7 @@ Prioridade: 🔴 Alta · 🟡 Média · ⚪ Baixa
 
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
-| [T-001 Definir stack e estrutura do repositório](tasks/T-001-definir-stack.md): Supabase e Vercel definidos; Next.js proposto no ADR-002, aguardando PO | 1 | 🔴 | |
+| [T-001 Definir stack e estrutura do repositório](tasks/T-001-definir-stack.md): scaffold Next.js pronto na branch `t-001-scaffold`, aguardando revisão do preview | 1 | 🔴 | |
 
 ## Backlog
 
@@ -60,3 +60,4 @@ Entregas do protótipo, já validadas:
 - Carga das 11 ferramentas da caixa appwepink no centro APP, responsável Financeiro.
 - Pesquisa de projetos open source de referência ([REFERENCIAS.md](REFERENCIAS.md)).
 - Banco (Supabase) e hospedagem (Vercel) definidos ([ADR-001](decisoes/ADR-001-stack.md)).
+- Framework Next.js + TypeScript aprovado ([ADR-002](decisoes/ADR-002-framework.md)).

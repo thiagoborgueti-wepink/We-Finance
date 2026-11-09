@@ -24,11 +24,27 @@ Na prática, isso significa:
 |---|---|---|
 | Banco, autenticação e arquivos | Supabase (Postgres, Auth, Storage) | Decidido |
 | Hospedagem | Vercel, projeto `wefinance` (time `thiagoborgueti-wepinks-projects`) | Decidido |
-| Framework | Next.js + TypeScript (proposta no [ADR-002](docs/decisoes/ADR-002-framework.md)) | Aguardando aprovação do PO |
+| Framework | Next.js 16 + TypeScript ([ADR-002](docs/decisoes/ADR-002-framework.md)) | Decidido |
 
 - Repositório: https://github.com/thiagoborgueti-wepink/We-Finance, conectado ao Vercel (deploy da `main`, preview por pull request).
 - Variáveis do Supabase são criadas no Vercel pela integração do Marketplace. Localmente: `vercel env pull .env.local`. Nomes em [.env.example](.env.example).
 - Detalhes em [docs/decisoes/ADR-001-stack.md](docs/decisoes/ADR-001-stack.md).
+
+## Código
+
+- **Next.js 16 tem mudanças que não estão no seu treino.** Antes de escrever código do Next, leia o guia correspondente em `node_modules/next/dist/docs/` (ver [AGENTS.md](AGENTS.md)). Exemplos: `middleware.ts` virou `src/proxy.ts`; com Cache Components, ler cookies ou sessão exige `<Suspense>`.
+- Estrutura: telas em `src/app/`, regras de negócio puras em `src/lib/<domínio>/` com teste ao lado (`*.test.ts`), clientes do Supabase em `src/lib/supabase/` (`server.ts` para servidor, `client.ts` para navegador).
+- Antes de commitar código, rode e deixe passando:
+
+```
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
+
+- Nova migração do banco: `npm run db:migration -- <nome>`, que cria o arquivo em `supabase/migrations/`.
+- No Windows, ao gravar arquivos pelo PowerShell 5.1, use UTF-8 **sem BOM**; o BOM quebra `config.toml` e JSON.
 
 ## Regras do projeto
 

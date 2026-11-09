@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Status | **Proposto**, aguardando aprovação do PO |
+| Status | **Aprovado** pelo PO em 09/11/2026 |
 | Data | 09/11/2026 |
 | Proposto por | Claude |
 | Tarefa | [T-001](../tasks/T-001-definir-stack.md) |
@@ -80,5 +80,16 @@ As regras de negócio (cálculo de custo mensal, situação de vencimento, parse
 
 ## Decisão do PO
 
-- [ ] Aprovado
-- [ ] Ajustar:
+- [x] Aprovado em 09/11/2026: "pode fazer em next".
+
+## Versões no scaffold
+
+Next.js 16.4.5 (App Router, Turbopack, Cache Components ativo), React 19.3, TypeScript 5, Tailwind CSS 4, `@supabase/ssr` 0.12, Vitest 5, Supabase CLI 3.
+
+Diferenças do Next.js 16 que afetam o código:
+
+- O antigo `middleware.ts` agora é `src/proxy.ts`, com a função exportada `proxy`.
+- Com Cache Components, ler cookies ou a sessão exige um `<Suspense>` em volta do componente.
+- A documentação da versão instalada fica em `node_modules/next/dist/docs/` e prevalece sobre exemplos antigos (ver `AGENTS.md`).
+
+O shadcn/ui e o Playwright entram na T-003, quando houver telas e fluxos para usar.
