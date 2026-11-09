@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Status | A fazer |
+| Status | Em andamento |
 | Fase | 1 |
 | Prioridade | Alta |
 | Responsável | |

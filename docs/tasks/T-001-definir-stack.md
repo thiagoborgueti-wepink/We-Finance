@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Status | Em andamento |
+| Status | Feito |
 | Fase | 1 |
 | Prioridade | Alta |
 | Responsável | |
@@ -32,8 +32,9 @@ Decidido em 09/11/2026 ([ADR-001](../decisoes/ADR-001-stack.md)):
 - [x] Hospedagem: Vercel, projeto `wefinance`.
 - [x] Framework: Next.js + TypeScript, aprovado no [ADR-002](../decisoes/ADR-002-framework.md).
 - [x] Scaffold na branch `t-001-scaffold`: clientes do Supabase, `proxy.ts` de sessão, Vitest, Supabase CLI, `vercel.json`.
-- [ ] PO revisa o preview do Vercel e aprova o merge na `main`.
+- [x] PO revisou o preview e fez o merge (PR #1, 09/11/2026).
+- [ ] Habilitar o ambiente Development na integração do Supabase, para `vercel env pull` funcionar localmente (pendente com o PO).
 - [x] Pasta local ligada ao projeto Vercel (`vercel link`).
 - [x] Variáveis do Supabase no Vercel via integração do Marketplace (Production e Preview).
 - [ ] Habilitar o ambiente Development na integração, para `vercel env pull` funcionar localmente.
-- [ ] Conectar o repositório GitHub ao projeto Vercel (deploy automático da `main` e preview por PR).
+- [x] Repositório GitHub conectado ao projeto Vercel (deploy automático da `main` e preview por PR).

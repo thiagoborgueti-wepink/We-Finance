@@ -15,7 +15,6 @@ Prioridade: 🔴 Alta · 🟡 Média · ⚪ Baixa
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
 | [T-022 Regularizar o pagamento do PlanetScale](tasks/T-022-regularizar-planetscale.md) | Operacional | 🔴 | Financeiro |
-| [T-002 Modelar os dados de ferramentas e centros de custo](tasks/T-002-modelo-de-dados.md) | 1 | 🔴 | |
 | [T-003 Construir o cadastro de ferramentas](tasks/T-003-cadastro-de-ferramentas.md) | 1 | 🔴 | |
 | [T-004 Separar custos por centro de custo](tasks/T-004-centro-de-custo.md) | 1 | 🔴 | |
 | [T-006 Mostrar vencimentos e alertas visuais](tasks/T-006-vencimentos-e-alertas.md) | 1 | 🔴 | |
@@ -30,7 +29,7 @@ Prioridade: 🔴 Alta · 🟡 Média · ⚪ Baixa
 
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
-| [T-001 Definir stack e estrutura do repositório](tasks/T-001-definir-stack.md): scaffold Next.js pronto na branch `t-001-scaffold`, aguardando revisão do preview | 1 | 🔴 | |
+| [T-002 Modelar os dados de ferramentas e centros de custo](tasks/T-002-modelo-de-dados.md) | 1 | 🔴 | Claude |
 
 ## Backlog
 
@@ -61,3 +60,4 @@ Entregas do protótipo, já validadas:
 - Pesquisa de projetos open source de referência ([REFERENCIAS.md](REFERENCIAS.md)).
 - Banco (Supabase) e hospedagem (Vercel) definidos ([ADR-001](decisoes/ADR-001-stack.md)).
 - Framework Next.js + TypeScript aprovado ([ADR-002](decisoes/ADR-002-framework.md)).
+- [T-001 Definir stack e estrutura do repositório](tasks/T-001-definir-stack.md): scaffold Next.js no ar (PR #1).
