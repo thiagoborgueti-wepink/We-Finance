@@ -21,8 +21,9 @@ O Supabase também cobre outras necessidades do roadmap:
 | Necessidade | Recurso do Supabase | Tarefa |
 |---|---|---|
 | Tabelas de ferramentas, centros de custo, histórico | Postgres + migrações via Supabase CLI | T-002, T-012 |
-| Permissões por perfil (financeiro, dev, leitura) | Row Level Security (RLS) | T-020 |
+| Permissões por perfil (financeiro, gestor de centro, leitura) | Row Level Security (RLS) | T-020 |
 | Login com conta Google da empresa | Supabase Auth (provedor Google) | T-020 |
+| SSO com Microsoft (Entra ID), num segundo momento | Supabase Auth (provedor Azure; SAML no plano Pro, se necessário) | T-025 |
 | Anexo de nota fiscal | Supabase Storage | T-018 |
 | Rotina diária de avisos e cotação | Edge Functions + pg_cron | T-011, T-013 |
 

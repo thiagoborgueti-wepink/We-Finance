@@ -47,6 +47,7 @@ Prioridade: 🔴 Alta · 🟡 Média · ⚪ Baixa
 | [T-018 Anexar nota fiscal ou recibo ao lançamento](tasks/T-018-anexo-de-nota-fiscal.md) | 3 | ⚪ | |
 | [T-019 Controlar assentos por ferramenta](tasks/T-019-assentos-por-ferramenta.md) | 3 | ⚪ | |
 | [T-020 Implementar login corporativo e perfis](tasks/T-020-login-e-perfis.md) | 4 | 🟡 | |
+| [T-025 Habilitar login com Microsoft (SSO)](tasks/T-025-sso-microsoft.md) | 4 | 🟡 | Claude · TI |
 | [T-021 Empacotar como projeto open source](tasks/T-021-empacotamento-open-source.md) | 4 | ⚪ | |
 
 ## Feito

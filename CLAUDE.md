@@ -38,6 +38,7 @@ Na prática, isso significa:
 - **Segredos nunca no git.** `.env` e `.env.*` estão no `.gitignore`. A chave `service_role` só no servidor.
 - **Banco:** migrações versionadas em `supabase/migrations/`; RLS habilitado em todas as tabelas desde a primeira migração.
 - **Dados sensíveis:** nunca armazenar número de cartão ou dado bancário.
+- **Login:** o produto terá SSO com Microsoft (Entra ID) num segundo momento (T-025). Desde já, perfis e permissões ficam ligados ao usuário do Supabase e ao e-mail, nunca ao provedor de login, para aceitar vários provedores sem migração.
 - **Open source no futuro (Fase 4):** não colocar dados reais da WePink (valores, contas, e-mails) em código, seeds ou testes. Use dados fictícios.
 - **Referências** (Wallos, Renewlet, Firefly III, Snipe-IT) servem só de inspiração. Não copiar código delas.
 - **Idioma:** interface e documentação em português do Brasil.

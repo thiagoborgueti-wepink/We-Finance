@@ -33,10 +33,11 @@ Tarefas: T-016 a T-019.
 
 ## Fase 4: Open source
 
-- Login corporativo e perfis (dev, financeiro, leitura).
+- Login corporativo e perfis (financeiro, gestor de centro, leitura).
+- SSO com Microsoft (Entra ID), num segundo momento.
 - Empacotamento: Docker, README de instalação, licença.
 
-Tarefas: T-020 e T-021.
+Tarefas: T-020, T-021 e T-025.
 
 ## Operacional
 
