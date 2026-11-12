@@ -1,6 +1,6 @@
 # Quadro de tarefas
 
-Atualizado em 09/11/2026.
+Atualizado em 12/11/2026.
 
 Como usar: cada tarefa tem um arquivo em [tasks/](tasks/). Para mover uma tarefa, altere o campo `Status` no arquivo e mova a linha para a coluna certa aqui, no mesmo commit. Tarefa nova: copie [tasks/_TEMPLATE.md](tasks/_TEMPLATE.md) com o próximo número livre.
 
@@ -29,7 +29,6 @@ Prioridade: 🔴 Alta · 🟡 Média · ⚪ Baixa
 
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
-| [T-002 Modelar os dados de ferramentas e centros de custo](tasks/T-002-modelo-de-dados.md) | 1 | 🔴 | Claude |
 
 ## Backlog
 
@@ -61,3 +60,4 @@ Entregas do protótipo, já validadas:
 - Banco (Supabase) e hospedagem (Vercel) definidos ([ADR-001](decisoes/ADR-001-stack.md)).
 - Framework Next.js + TypeScript aprovado ([ADR-002](decisoes/ADR-002-framework.md)).
 - [T-001 Definir stack e estrutura do repositório](tasks/T-001-definir-stack.md): scaffold Next.js no ar (PR #1).
+- [T-002 Modelar os dados de ferramentas e centros de custo](tasks/T-002-modelo-de-dados.md): tabelas com RLS aplicadas no Supabase (PR #2).

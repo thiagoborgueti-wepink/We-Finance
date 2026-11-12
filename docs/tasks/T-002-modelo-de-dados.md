@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Status | Em andamento |
+| Status | Feito |
 | Fase | 1 |
 | Prioridade | Alta |
 | Responsável | |
@@ -21,12 +21,12 @@ O protótipo guarda cada ferramenta como um documento com campos livres. O produ
 
 ## Critérios de aceite
 
-- [ ] Migrações em `supabase/migrations/` criam as tabelas no Supabase.
-- [ ] RLS habilitado em todas as tabelas.
-- [ ] Nenhum campo armazena número de cartão ou dado bancário.
-- [ ] Ciclos com período maior que um ano (ex.: certificado SSL de 3 anos) têm forma clara de registro.
+- [x] Migrações em `supabase/migrations/` criam as tabelas no Supabase.
+- [x] RLS habilitado em todas as tabelas.
+- [x] Nenhum campo armazena número de cartão ou dado bancário.
+- [x] Ciclos com período maior que um ano (ex.: certificado SSL de 3 anos) têm forma clara de registro.
 
-## Andamento (branch `t-002-modelo-de-dados`)
+## Andamento (PR #2, merge em 12/11/2026)
 
 - [x] Migração `supabase/migrations/20261109202343_modelo_inicial.sql`: tabelas `ferramentas`, `centros_custo`, `categorias`, `dominios_permitidos`, com RLS.
 - [x] Ciclo em meses (`ciclo_meses`), resolvendo o caso de 3 anos da Sectigo; regra de custo e testes atualizados.
@@ -34,8 +34,9 @@ O protótipo guarda cada ferramenta como um documento com campos livres. O produ
 - [x] Acesso restrito a domínios de e-mail autorizados, porque o Supabase permite cadastro aberto por padrão.
 - [x] `supabase/seed.sql` com dados fictícios e [MODELO-DE-DADOS.md](../MODELO-DE-DADOS.md).
 - [x] Sintaxe SQL validada com o parser do Postgres (`libpg-query`).
-- [ ] Rodar a migração num banco real (local com Docker, ou no Supabase após o merge).
-- [ ] Aplicar no projeto Supabase e cadastrar o domínio da empresa em `dominios_permitidos`.
+- [x] Migração aplicada no projeto Supabase em 12/11/2026 (`supabase db push --remote`, sem seed).
+- [x] Domínio da empresa cadastrado em `dominios_permitidos` (feito direto no banco, fora do repositório).
+- [x] Conferido no banco: 4 tabelas com RLS ativo, 9 policies, 7 categorias, migração registrada em `supabase_migrations`.
 
 ## Notas
 
