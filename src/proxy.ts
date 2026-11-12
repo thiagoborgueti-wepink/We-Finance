@@ -5,7 +5,7 @@ import { supabaseEnv } from "@/lib/supabase/env";
 /**
  * Renova a sessão do Supabase a cada requisição, regravando os cookies.
  * No Next.js 16 o antigo `middleware.ts` se chama `proxy.ts`.
- * O bloqueio de rotas por login entra na T-020.
+ * Também protege as rotas: sem login, redireciona para /login (T-026).
  */
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
@@ -32,7 +32,20 @@ export async function proxy(request: NextRequest) {
 
   // Não colocar código entre a criação do cliente e esta chamada:
   // ela valida o token e dispara a renovação dos cookies.
-  await supabase.auth.getClaims();
+  const { data } = await supabase.auth.getClaims();
+  const logado = Boolean(data?.claims?.sub);
+  const naTelaDeLogin = request.nextUrl.pathname === "/login";
+
+  // Sem sessão, toda rota leva ao login; já logado, o login volta para o início.
+  // Os cookies renovados acima precisam seguir junto no redirecionamento.
+  if (logado === naTelaDeLogin) {
+    const destino = request.nextUrl.clone();
+    destino.pathname = logado ? "/" : "/login";
+    destino.search = "";
+    const redirecionamento = NextResponse.redirect(destino);
+    response.cookies.getAll().forEach((cookie) => redirecionamento.cookies.set(cookie));
+    return redirecionamento;
+  }
 
   return response;
 }

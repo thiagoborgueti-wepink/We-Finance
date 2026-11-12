@@ -1,5 +1,8 @@
+import { Suspense } from "react";
+import { getUsuarioAtual } from "@/lib/auth/usuario";
+import { sair } from "./login/actions";
+
 const proximosPassos = [
-  { id: "T-002", titulo: "Modelar ferramentas e centros de custo no Supabase" },
   { id: "T-003", titulo: "Cadastro de ferramentas" },
   { id: "T-004", titulo: "Custos por centro de custo" },
   { id: "T-006", titulo: "Vencimentos e alertas" },
@@ -8,6 +11,10 @@ const proximosPassos = [
 export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-10 px-4 py-16 sm:px-6">
+      <Suspense fallback={<div className="h-9" />}>
+        <BarraUsuario />
+      </Suspense>
+
       <header className="flex flex-col gap-3">
         <p className="text-sm font-medium uppercase tracking-wider text-foreground/60">
           Em construção
@@ -35,5 +42,22 @@ export default function Home() {
         </ul>
       </section>
     </main>
+  );
+}
+
+async function BarraUsuario() {
+  const usuario = await getUsuarioAtual();
+  return (
+    <div className="flex items-center justify-between gap-4 text-sm text-foreground/70">
+      <span className="truncate">{usuario.email}</span>
+      <form action={sair}>
+        <button
+          type="submit"
+          className="rounded-md border border-foreground/20 px-3 py-1.5 hover:border-foreground/50"
+        >
+          Sair
+        </button>
+      </form>
+    </div>
   );
 }
