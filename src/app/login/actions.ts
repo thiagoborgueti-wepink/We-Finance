@@ -23,7 +23,13 @@ export async function entrar(_anterior: EstadoLogin, form: FormData): Promise<Es
   const supabase = await createClient();
   const { error } = await supabase.auth.signInWithPassword({ email, password: senha });
   if (error) {
-    return { erro: "E-mail ou senha incorretos.", email };
+    // Sem e-mail nem senha no log: só o código do erro e o projeto Supabase usado.
+    console.error("[login] falha", {
+      codigo: error.code,
+      status: error.status,
+      projeto: supabaseHost(),
+    });
+    return { erro: mensagemDeErro(error.code), email };
   }
 
   // Mesmo com senha válida, só entra quem tem e-mail de domínio autorizado.
@@ -35,6 +41,30 @@ export async function entrar(_anterior: EstadoLogin, form: FormData): Promise<Es
   }
 
   redirect("/");
+}
+
+function mensagemDeErro(codigo: string | undefined): string {
+  switch (codigo) {
+    case "email_not_confirmed":
+      return "E-mail ainda não confirmado. Peça ao administrador para confirmar a conta.";
+    case "user_banned":
+      return "Esta conta está bloqueada.";
+    case "over_request_rate_limit":
+    case "over_email_send_rate_limit":
+      return "Muitas tentativas. Aguarde alguns minutos e tente de novo.";
+    case "invalid_credentials":
+      return "E-mail ou senha incorretos.";
+    default:
+      return "Não foi possível entrar agora. Tente de novo em instantes.";
+  }
+}
+
+function supabaseHost(): string {
+  try {
+    return new URL(process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").host;
+  } catch {
+    return "não configurado";
+  }
 }
 
 export async function sair() {
