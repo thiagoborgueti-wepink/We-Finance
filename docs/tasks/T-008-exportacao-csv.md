@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | A fazer |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Média |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-003 |
 
 ## O que fazer
@@ -16,5 +16,5 @@
 
 ## Critérios de aceite
 
-- [ ] O arquivo abre no Excel com acentos corretos.
-- [ ] O arquivo reimporta pela T-007 sem ajuste.
+- [ ] O arquivo abre no Excel com acentos corretos (conferir no preview).
+- [x] O arquivo reimporta pela T-007 sem ajuste.

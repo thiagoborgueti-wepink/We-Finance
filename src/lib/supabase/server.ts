@@ -10,13 +10,19 @@ import { requireSupabaseEnv } from "./env";
  * Com Cache Components ativo, quem chamar esta função lê cookies e precisa
  * estar dentro de um <Suspense>.
  */
-export async function createClient() {
+export interface OpcoesCliente {
+  /** Marca as gravações no histórico (T-012); o gatilho lê este cabeçalho. */
+  origem?: "importacao";
+}
+
+export async function createClient(opcoes: OpcoesCliente = {}) {
   // cookies() primeiro: marca a renderização como dinâmica antes de exigir as
   // variáveis, para o build não tentar pré-renderizar e falhar sem .env.
   const cookieStore = await cookies();
   const { url, key } = requireSupabaseEnv();
 
   return createServerClient(url, key, {
+    global: opcoes.origem ? { headers: { "x-wefinance-origem": opcoes.origem } } : undefined,
     cookies: {
       getAll() {
         return cookieStore.getAll();

@@ -15,29 +15,35 @@ Prioridade: 🔴 Alta · 🟡 Média · ⚪ Baixa
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
 | [T-022 Regularizar o pagamento do PlanetScale](tasks/T-022-regularizar-planetscale.md) | Operacional | 🔴 | Financeiro |
-| [T-003 Construir o cadastro de ferramentas](tasks/T-003-cadastro-de-ferramentas.md) | 1 | 🔴 | |
-| [T-004 Separar custos por centro de custo](tasks/T-004-centro-de-custo.md) | 1 | 🔴 | |
-| [T-006 Mostrar vencimentos e alertas visuais](tasks/T-006-vencimentos-e-alertas.md) | 1 | 🔴 | |
-| [T-005 Montar o painel de resumo](tasks/T-005-painel-de-resumo.md) | 1 | 🟡 | |
-| [T-007 Importar ferramentas por CSV](tasks/T-007-importacao-csv.md) | 1 | 🟡 | |
-| [T-008 Exportar ferramentas para CSV](tasks/T-008-exportacao-csv.md) | 1 | 🟡 | |
 | [T-009 Migrar os dados do protótipo](tasks/T-009-migrar-dados-do-prototipo.md) | 1 | 🟡 | |
 | [T-023 Levantar valores de Frenet, OneSignal e Redis Cloud](tasks/T-023-levantar-valores-pendentes.md) | Operacional | 🟡 | Financeiro |
 | [T-024 Confirmar data e uso variável do Vercel](tasks/T-024-confirmar-cobranca-vercel.md) | Operacional | 🟡 | Financeiro |
+
+## Em revisão (branch `fase-1-cadastro`)
+
+Prontas no código, com testes automáticos. Falta o PO conferir no preview do Vercel e fazer o merge.
+
+| Tarefa | Fase | Prioridade | Responsável |
+|---|---|---|---|
+| [T-003 Construir o cadastro de ferramentas](tasks/T-003-cadastro-de-ferramentas.md) | 1 | 🔴 | Claude |
+| [T-004 Separar custos por centro de custo](tasks/T-004-centro-de-custo.md) | 1 | 🔴 | Claude |
+| [T-006 Mostrar vencimentos e alertas visuais](tasks/T-006-vencimentos-e-alertas.md) | 1 | 🔴 | Claude |
+| [T-005 Montar o painel de resumo](tasks/T-005-painel-de-resumo.md) | 1 | 🟡 | Claude |
+| [T-007 Importar ferramentas por CSV](tasks/T-007-importacao-csv.md) | 1 | 🟡 | Claude |
+| [T-008 Exportar ferramentas para CSV](tasks/T-008-exportacao-csv.md) | 1 | 🟡 | Claude |
+| [T-010 Definir orçamento por centro de custo](tasks/T-010-orcamento-por-centro.md) | 1 | 🟡 | Claude |
+| [T-011 Buscar a cotação do dólar automaticamente](tasks/T-011-cotacao-automatica.md) | 1 | 🟡 | Claude |
+| [T-012 Registrar o histórico de alterações](tasks/T-012-historico-de-alteracoes.md) | 1 | 🟡 | Claude |
 
 ## Em andamento
 
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
-| [T-026 Login mínimo com e-mail e senha](tasks/T-026-login-minimo.md) | 1 | 🔴 | Claude |
 
 ## Backlog
 
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
-| [T-010 Definir orçamento por centro de custo](tasks/T-010-orcamento-por-centro.md) | 1 | 🟡 | |
-| [T-011 Buscar a cotação do dólar automaticamente](tasks/T-011-cotacao-automatica.md) | 1 | 🟡 | |
-| [T-012 Registrar o histórico de alterações](tasks/T-012-historico-de-alteracoes.md) | 1 | 🟡 | |
 | [T-013 Enviar avisos antes do vencimento](tasks/T-013-avisos-de-vencimento.md) | 2 | 🔴 | |
 | [T-015 Ler faturas da caixa de e-mail com fila de revisão](tasks/T-015-leitura-de-faturas-por-email.md) | 2 | 🟡 | |
 | [T-014 Publicar calendário de vencimentos (iCal)](tasks/T-014-calendario-ical.md) | 2 | ⚪ | |
@@ -62,3 +68,4 @@ Entregas do protótipo, já validadas:
 - Framework Next.js + TypeScript aprovado ([ADR-002](decisoes/ADR-002-framework.md)).
 - [T-001 Definir stack e estrutura do repositório](tasks/T-001-definir-stack.md): scaffold Next.js no ar (PR #1).
 - [T-002 Modelar os dados de ferramentas e centros de custo](tasks/T-002-modelo-de-dados.md): tabelas com RLS aplicadas no Supabase (PR #2).
+- [T-026 Login mínimo com e-mail e senha](tasks/T-026-login-minimo.md): login no ar e site ligado ao banco certo (PRs #3 e #4).

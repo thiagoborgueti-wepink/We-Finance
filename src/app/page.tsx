@@ -1,55 +1,52 @@
 import { Suspense } from "react";
 import { getUsuarioAtual } from "@/lib/auth/usuario";
+import { carregarPainel } from "@/lib/ferramentas/dados";
+import { Painel } from "./_painel/painel";
 import { sair } from "./login/actions";
-
-const proximosPassos = [
-  { id: "T-003", titulo: "Cadastro de ferramentas" },
-  { id: "T-004", titulo: "Custos por centro de custo" },
-  { id: "T-006", titulo: "Vencimentos e alertas" },
-];
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-10 px-4 py-16 sm:px-6">
-      <Suspense fallback={<div className="h-9" />}>
-        <BarraUsuario />
-      </Suspense>
-
-      <header className="flex flex-col gap-3">
-        <p className="text-sm font-medium uppercase tracking-wider text-foreground/60">
-          Em construção
-        </p>
-        <h1 className="text-3xl font-semibold tracking-tight">We-Finance</h1>
-        <p className="max-w-prose text-foreground/80">
-          Central de assinaturas da WePink: quanto pagamos por cada ferramenta,
-          quando vence, quem responde pela conta e a qual centro de custo pertence.
-        </p>
+    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 px-4 py-6 sm:px-6 sm:py-8">
+      <header className="flex items-center justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">We-Finance</h1>
+          <p className="text-sm text-foreground/60">Central de assinaturas da WePink</p>
+        </div>
+        <Suspense fallback={<div className="h-9" />}>
+          <BarraUsuario />
+        </Suspense>
       </header>
 
-      <section aria-labelledby="proximos" className="flex flex-col gap-3">
-        <h2 id="proximos" className="text-lg font-semibold">
-          Próximas entregas
-        </h2>
-        <ul className="flex flex-col divide-y divide-foreground/10 rounded-lg border border-foreground/10">
-          {proximosPassos.map((passo) => (
-            <li key={passo.id} className="flex gap-4 px-4 py-3">
-              <span className="font-mono text-sm text-foreground/60 tabular-nums">
-                {passo.id}
-              </span>
-              <span>{passo.titulo}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <Suspense fallback={<CarregandoPainel />}>
+        <ConteudoPainel />
+      </Suspense>
     </main>
+  );
+}
+
+async function ConteudoPainel() {
+  const dados = await carregarPainel();
+  return <Painel dados={dados} />;
+}
+
+function CarregandoPainel() {
+  return (
+    <div className="flex flex-col gap-6" aria-busy="true" aria-label="Carregando">
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className="h-24 animate-pulse rounded-lg bg-foreground/5" />
+        ))}
+      </div>
+      <div className="h-64 animate-pulse rounded-lg bg-foreground/5" />
+    </div>
   );
 }
 
 async function BarraUsuario() {
   const usuario = await getUsuarioAtual();
   return (
-    <div className="flex items-center justify-between gap-4 text-sm text-foreground/70">
-      <span className="truncate">{usuario.email}</span>
+    <div className="flex min-w-0 items-center gap-3 text-sm text-foreground/70">
+      <span className="hidden truncate sm:inline">{usuario.email}</span>
       <form action={sair}>
         <button
           type="submit"

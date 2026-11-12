@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | Backlog |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Média |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-004 |
 
 ## Contexto
@@ -20,5 +20,5 @@ Ideia inspirada no Renewlet. Hoje mostramos o custo, mas não há limite para co
 
 ## Critérios de aceite
 
-- [ ] Centro sem orçamento definido não mostra alerta.
-- [ ] O percentual usa o mesmo custo mensal do resumo.
+- [x] Centro sem orçamento definido não mostra alerta.
+- [x] O percentual usa o mesmo custo mensal do resumo.

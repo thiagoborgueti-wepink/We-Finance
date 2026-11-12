@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | Backlog |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Média |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-005 |
 
 ## Contexto
@@ -20,5 +20,5 @@ Ideia inspirada no Wallos. A cotação digitada à mão distorce os totais de fe
 
 ## Critérios de aceite
 
-- [ ] Se a fonte falhar, usa a última cotação salva e avisa a data.
-- [ ] Nenhuma chave de API fica no código.
+- [x] Se a fonte falhar, usa a última cotação salva e avisa a data.
+- [x] Nenhuma chave de API fica no código.

@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | A fazer |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Média |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-003 |
 
 ## O que fazer
@@ -21,5 +21,5 @@ Cotação USD → BRL editável enquanto a T-011 não existir.
 
 ## Critérios de aceite
 
-- [ ] Ferramentas pausadas não entram nos custos.
-- [ ] Os números batem com a soma da tabela.
+- [x] Ferramentas pausadas não entram nos custos.
+- [x] Os números batem com a soma da tabela.
