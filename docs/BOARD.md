@@ -29,6 +29,7 @@ Prioridade: 🔴 Alta · 🟡 Média · ⚪ Baixa
 
 | Tarefa | Fase | Prioridade | Responsável |
 |---|---|---|---|
+| [T-026 Login mínimo com e-mail e senha](tasks/T-026-login-minimo.md) | 1 | 🔴 | Claude |
 
 ## Backlog
 

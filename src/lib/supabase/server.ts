@@ -11,8 +11,10 @@ import { requireSupabaseEnv } from "./env";
  * estar dentro de um <Suspense>.
  */
 export async function createClient() {
-  const { url, key } = requireSupabaseEnv();
+  // cookies() primeiro: marca a renderização como dinâmica antes de exigir as
+  // variáveis, para o build não tentar pré-renderizar e falhar sem .env.
   const cookieStore = await cookies();
+  const { url, key } = requireSupabaseEnv();
 
   return createServerClient(url, key, {
     cookies: {
