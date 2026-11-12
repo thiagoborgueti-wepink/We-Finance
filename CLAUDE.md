@@ -27,7 +27,8 @@ Na prática, isso significa:
 | Framework | Next.js 16 + TypeScript ([ADR-002](docs/decisoes/ADR-002-framework.md)) | Decidido |
 
 - Repositório: https://github.com/thiagoborgueti-wepink/We-Finance, conectado ao Vercel (deploy da `main`, preview por pull request).
-- Variáveis do Supabase são criadas no Vercel pela integração do Marketplace. Localmente: `vercel env pull .env.local`. Nomes em [.env.example](.env.example).
+- Banco: projeto Supabase `foxvdhtmbjgqulzlnjag` ("We-Finance", us-west-2). **Não usar a integração do Supabase do Marketplace do Vercel**: ela cria um projeto novo e separado (foi o que aconteceu com `rmrjnxldbktmgcpffyfm`, desconectado em 12/11/2026).
+- Variáveis no Vercel cadastradas à mão (`NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, em Production, Preview e Development). Localmente: `vercel env pull .env.local`. Nomes em [.env.example](.env.example).
 - Detalhes em [docs/decisoes/ADR-001-stack.md](docs/decisoes/ADR-001-stack.md).
 
 ## Código

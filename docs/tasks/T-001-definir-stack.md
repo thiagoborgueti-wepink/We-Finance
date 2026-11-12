@@ -33,8 +33,7 @@ Decidido em 09/11/2026 ([ADR-001](../decisoes/ADR-001-stack.md)):
 - [x] Framework: Next.js + TypeScript, aprovado no [ADR-002](../decisoes/ADR-002-framework.md).
 - [x] Scaffold na branch `t-001-scaffold`: clientes do Supabase, `proxy.ts` de sessão, Vitest, Supabase CLI, `vercel.json`.
 - [x] PO revisou o preview e fez o merge (PR #1, 09/11/2026).
-- [ ] Habilitar o ambiente Development na integração do Supabase, para `vercel env pull` funcionar localmente (pendente com o PO).
 - [x] Pasta local ligada ao projeto Vercel (`vercel link`).
-- [x] Variáveis do Supabase no Vercel via integração do Marketplace (Production e Preview).
-- [ ] Habilitar o ambiente Development na integração, para `vercel env pull` funcionar localmente.
+- [x] Variáveis do Supabase no Vercel em Production, Preview e Development (`vercel env pull` funciona localmente).
+- Correção em 12/11/2026: a integração do Marketplace tinha criado outro projeto Supabase (`rmrjnxldbktmgcpffyfm`), e o site não enxergava o banco `foxvdhtmbjgqulzlnjag`. A integração foi desconectada e as variáveis foram cadastradas à mão.
 - [x] Repositório GitHub conectado ao projeto Vercel (deploy automático da `main` e preview por PR).
