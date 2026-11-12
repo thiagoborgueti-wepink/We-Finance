@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | A fazer |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Alta |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-003 |
 
 ## Contexto
@@ -20,5 +20,5 @@ O financeiro precisa saber quanto cada time gasta. Hoje todas as ferramentas cad
 
 ## Critérios de aceite
 
-- [ ] Ao filtrar por APP, todos os totais consideram só o APP.
-- [ ] A soma dos centros bate com o total geral.
+- [x] Ao filtrar por APP, todos os totais consideram só o APP.
+- [x] A soma dos centros bate com o total geral.

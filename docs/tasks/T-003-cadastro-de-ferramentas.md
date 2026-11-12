@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | A fazer |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Alta |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-002 |
 
 ## Contexto
@@ -21,6 +21,6 @@
 
 ## Critérios de aceite
 
-- [ ] Criar, editar e excluir funcionam e persistem.
-- [ ] Custo mensal converte USD para BRL e divide valores anuais por 12.
+- [ ] Criar, editar e excluir funcionam e persistem (conferir no preview).
+- [x] Custo mensal converte USD para BRL e divide valores anuais por 12.
 - [ ] Funciona em tela de celular sem rolagem horizontal da página.

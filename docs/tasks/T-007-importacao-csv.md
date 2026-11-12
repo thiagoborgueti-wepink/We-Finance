@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | A fazer |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Média |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-003, T-004 |
 
 ## Contexto
@@ -23,9 +23,9 @@ O financeiro mantém listas em planilha. A importação evita cadastro manual.
 
 ## Critérios de aceite
 
-- [ ] Nada é gravado antes de o usuário confirmar a prévia.
-- [ ] O CSV exportado (T-008) pode ser reimportado sem ajuste.
-- [ ] Limite de 500 linhas e 2 MB, com mensagem clara.
+- [x] Nada é gravado antes de o usuário confirmar a prévia.
+- [x] O CSV exportado (T-008) pode ser reimportado sem ajuste.
+- [x] Limite de 500 linhas e 2 MB, com mensagem clara.
 
 ## Notas
 

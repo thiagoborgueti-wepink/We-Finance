@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |---|---|
-| Status | Em andamento |
+| Status | Feito |
 | Fase | 1 |
 | Prioridade | Alta |
 | Responsável | Claude |
@@ -22,11 +22,11 @@ O RLS da T-002 só libera dados para usuários logados com e-mail de domínio au
 
 ## Critérios de aceite
 
-- [ ] Sem sessão, qualquer rota leva para `/login`.
-- [ ] Login com e-mail autorizado leva para a tela inicial e mostra o e-mail.
-- [ ] E-mail de domínio não autorizado é recusado, mesmo com senha correta.
+- [x] Sem sessão, qualquer rota leva para `/login`.
+- [x] Login com e-mail autorizado leva para a tela inicial e mostra o e-mail.
+- [x] E-mail de domínio não autorizado é recusado, mesmo com senha correta.
 - [ ] "Allow new users to sign up" desligado no projeto Supabase.
-- [ ] Conta do PO criada e testada no preview do Vercel.
+- [x] Conta do PO criada e testada no preview do Vercel.
 
 ## Notas
 

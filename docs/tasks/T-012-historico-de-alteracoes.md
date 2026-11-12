@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | Backlog |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Média |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-003 |
 
 ## Contexto
@@ -19,8 +19,8 @@ Ideia inspirada no Snipe-IT. O financeiro precisa auditar quem mudou valor, data
 
 ## Critérios de aceite
 
-- [ ] Importações por CSV também geram histórico.
-- [ ] O histórico não pode ser editado pela interface.
+- [x] Importações por CSV também geram histórico.
+- [x] O histórico não pode ser editado pela interface.
 
 ## Notas
 

@@ -48,6 +48,23 @@ Dados de referência criados pela migração: Infra e deploy, Lojas de app, Prod
 
 Domínios de e-mail que podem acessar os dados. **Fica vazia na migração**, porque o projeto será open source; o domínio da empresa é cadastrado direto no banco de cada ambiente. Sem nenhum domínio, ninguém acessa (falha fechada).
 
+### `cotacoes` (T-011)
+
+Cotações USD → BRL registradas: `valor`, `data_referencia` (data do boletim), `fonte` (`ptax` ou `manual`), `registrada_em`, `registrada_por`. Vale a registrada por último.
+
+- Uma vez por dia (horário de São Paulo), ao abrir o painel, a aplicação busca a PTAX de venda no Banco Central (API pública, sem chave) e registra.
+- Uma cotação manual vale até a próxima busca diária.
+- Se o BCB falhar, usa a última salva e avisa a data. Sem nenhuma salva, usa R$ 5,50 provisório com aviso.
+- Pode ler e inserir; não pode alterar nem apagar (as linhas são o histórico da cotação).
+
+### `historico_ferramentas` (T-012)
+
+Auditoria preenchida só pelo gatilho `ferramentas_historico`: criação, exclusão e uma linha por campo alterado na edição, com valor anterior e novo em texto (centro e categoria pelo nome), e-mail de quem fez e `origem` (`interface` ou `importacao`).
+
+- A importação marca a origem com o cabeçalho HTTP `x-wefinance-origem: importacao`, que o gatilho lê de `request.headers`.
+- Sem chave estrangeira para `ferramentas`: o histórico sobrevive à exclusão.
+- Pela API só há leitura. Não há política de insert, update nem delete.
+
 ## Segurança (RLS)
 
 RLS está ativo em todas as tabelas.

@@ -2,10 +2,10 @@
 
 | Campo | Valor |
 |---|---|
-| Status | A fazer |
+| Status | Em revisão |
 | Fase | 1 |
 | Prioridade | Alta |
-| Responsável | |
+| Responsável | Claude |
 | Depende de | T-003 |
 
 ## Contexto
@@ -19,5 +19,5 @@ A dor principal: cobranças que vencem sem ninguém ver, como o PlanetScale em o
 
 ## Critérios de aceite
 
-- [ ] Uma cobrança com data passada aparece como vencida, em destaque.
-- [ ] Os alertas usam texto além da cor (acessibilidade).
+- [x] Uma cobrança com data passada aparece como vencida, em destaque.
+- [x] Os alertas usam texto além da cor (acessibilidade).
